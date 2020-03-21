@@ -12,7 +12,12 @@
 <script>
   function downloadApk() {
     // window.open("./RoomCharge.apk")
-    download("./RoomCharge.apk")
+    // download("/RoomCharge.apk")
+    var x=new XMLHttpRequest();
+    x.open( "GET", "/RoomCharge.apk" , true);
+    x.responseType = 'blob';
+    x.onload= function(e){ download(e.target.response) }
+    x.send();
   }
 </script>
 </html>
