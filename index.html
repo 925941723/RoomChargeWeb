@@ -6,11 +6,13 @@
 </head>
 <body>
 <!--<a href="./RoomCharge.apk" download="RoomCharge.apk">下载</a>-->
-  <div onclick="download()">下载</div>
+  <div onclick="downloadApk()">下载</div>
 </body>
+<script type="text/javascript" src="./download.min.js"></script>
 <script>
-  function download() {
-    window.open("./RoomCharge.apk")
+  function downloadApk() {
+    // window.open("./RoomCharge.apk")
+    download("/RoomCharge.apk")
   }
 </script>
 </html>
